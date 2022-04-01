@@ -1,0 +1,101 @@
+<nav>
+
+  <div class="logo">vCart</div>
+
+  <input type="checkbox" id="click">
+
+  <label for="click" class="menu-btn">
+
+    <i class="fas fa-bars"></i>
+    <li><a class="active" href="#" [routerLink]="['']">Logout</a></li>
+
+  </label>
+
+
+
+</nav>
+
+
+
+
+
+<div class="container">
+
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2
+      }
+
+      th {
+        background-color: #A13941FF;
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #D6EEEE;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+
+
+
+
+
+
+
+
+  <br>
+  <h2>Select the retailers to approve</h2><br><br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Retailer Id</th>
+        <th>Retailer Name</th>
+        <th>Phone number</th>
+        <th>Email Id</th>
+        <th>Status</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of retailer">
+        <td><span>{{r.retailerId}}</span></td>
+        <td><span>{{r.retailerName}}</span></td>
+        <td><span>{{r.mobileNo}}</span></td>
+        <td><span>{{r.emailId}}</span></td>
+        <td><span>{{msg2}}</span></td>
+
+
+
+      </tr>
+    </tbody>
+  </table>
+  <br><br>
+
+  <button class="btn btn-sm btn-info" (click)="approveRetailer()">
+    <i class="fa fa-solid fa-person-circle-check"></i>Approve</button>
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

@@ -1,0 +1,46 @@
+<body>
+    <form #regForm="ngForm" (ngSubmit)="addProducts()">
+        <div class="container">
+            <h1>Add New Product</h1>
+            <p>Please enter the fields to add product.</p>
+            <hr>
+
+            <label><b> Product Name</b></label>
+            <input type="text" placeholder="Enter product name" name="name" #pname="ngModel" required
+                [(ngModel)]="product.productName">
+
+
+            <label><b>Product Category</b></label>
+            <input type="text" placeholder="Enter product category" name="password" #pcat="ngModel" required
+                [(ngModel)]="product.categoryName">
+
+            <label><b>Product Brand</b></label>
+            <input type="text" placeholder="Enter product brand" #pbrand="ngModel" name="brand" required
+                [(ngModel)]="product.brand">
+
+            <label><b>Product Description</b></label>
+            <input type="text" placeholder="Enter product description" #pdesc="ngModel" name="desc" required
+                [(ngModel)]="product.descriptio">
+
+            <label><b> Product Price</b></label>
+            <input type="text" placeholder="Enter product price" name="moob" #pprice="ngModel" required
+                [(ngModel)]="product.productPrice">
+
+            <label><b>Stock</b></label>
+            <input type="text" placeholder="Enter product quantity" name="mail" #pstock="ngModel" required required
+                [(ngModel)]="product.stock">
+
+            <label><b> Upload Product image</b></label>
+            <input type="file" placeholder="Upload picture" name="img" #pimg="ngModel" required required
+                [(ngModel)]="product.img" />
+
+            <hr>
+
+
+            <button type="submit" class="registerbtn">Add product</button>
+        </div>
+
+
+    </form>
+</body>
+<app-footer></app-footer>

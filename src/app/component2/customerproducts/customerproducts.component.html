@@ -1,0 +1,55 @@
+<header>
+
+  <nav>
+    <div class="logo"><img src="assets/carts.png" width="65" height="65" class="d-inline-block align-top" alt=""></div>
+    <div class="logo">vCart</div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <form class="form-inline d-flex justify-content-center md-form form-sm">
+      <input class="form-control form-control-sm mr-3 w-75" type="text" [(ngModel)]="searchTerm"
+        (keyup)="search($event)" placeholder="Search" aria-label="Search">
+    </form>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#" [routerLink]="['/customerProducts']">Products</a></li>
+
+
+      <li><a href="#" [routerLink]="['/updateProfile']">Update</a></li>
+
+
+      <li>
+        <button [routerLink]="['/cartHome']">Cart</button>
+      </li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let product of products | search:searchKey:'productName'">
+      <div class="card">
+        <div class="card-header">
+          <p class="price">{{product.productName}}
+        </div>
+        <div class="card-body">
+          <img src="\assets\electronics1.jpg" width=50 height=50 alt="">
+          <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+            {{product.productName}}</h5>
+          <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+            {{product.descriptio}}</p>
+          <p><strong>Price:</strong> ₹{{product.productPrice}}</p>
+          <button class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
+          <br>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+<app-footer></app-footer>

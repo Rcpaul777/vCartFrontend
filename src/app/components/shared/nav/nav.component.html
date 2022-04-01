@@ -1,0 +1,18 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal"> 
+      <app-header></app-header>
+    </h5>
+    <nav style="color: black" >
+      <a class="p-2 text-dark" href="#" [routerLink]="['']"><img src="assets/carts.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      
+      <a class="p-2 text-dark" href="#" [routerLink]="['/customerProducts']">Products</a>
+      <a class="p-2 text-dark" href="#" [routerLink]="['/cartHome']">Cart</a>
+      <a class="p-2 text-dark" href="#" [routerLink]="['/updateProfile']">Profile</a>
+      <a class="p-2 text-dark" href="#" [routerLink]="['']">Logout</a>
+      <router-outlet> </router-outlet>
+    </nav>
+  </div>
+  
+
+  

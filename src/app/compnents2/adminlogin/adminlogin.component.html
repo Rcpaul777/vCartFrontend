@@ -1,0 +1,22 @@
+<form  #regForm="ngForm" (ngSubmit)="login()" >
+    <div class="container" >
+        <h1>Admin Login</h1>
+        
+        <hr>
+        
+        <label for="email"><b>Enter Admin Id</b></label>
+        <input type="text" placeholder="Enter Id" name="mail" #ue="ngModel"  required [(ngModel)]="adminLogin.adminId"/>
+
+        <label for="psw"><b>Enter Admin Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" #up="ngModel"  required  [(ngModel)]="adminLogin.adminPassword"/>
+
+        <hr>
+
+        <button type="submit" class="registerbtn">Login</button>
+        
+    </div>
+  
+</form>
+
+<br><br><br><br><br><br>
+<app-footer></app-footer>

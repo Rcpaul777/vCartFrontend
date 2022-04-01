@@ -1,0 +1,30 @@
+
+<body>
+    <form  #regForm="ngForm" (ngSubmit)="update()" >
+        <div class="container">
+            <h1>Update your Profile {{customerName}}</h1>
+            <p>Please fill in the details you want to update</p>
+            <hr>
+ 
+            <label for="email"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name"  name="name" #un="ngModel"  required  [(ngModel)]="customer.customerName"/>
+
+            <label for="psw"><b>Mobile Number</b></label>
+            <input type="text" placeholder="Enter Mobile number" name="moob" #um="ngModel"required  [(ngModel)]="customer.customerMobNo"/>
+ 
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="mail"#ue="ngModel" required required [(ngModel)]="customer.customerEmailId"/>
+ 
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" #up="ngModel"  required  [(ngModel)]="customer.customerPassword"/>
+
+            <hr>
+ 
+           <button type="submit" class="registerbtn" >Update</button>
+        </div>
+ 
+    </form>
+</body>
+
+
+<app-footer></app-footer>

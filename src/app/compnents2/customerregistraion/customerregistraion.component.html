@@ -1,0 +1,33 @@
+
+<body>
+    <form  #regForm="ngForm" (ngSubmit)="register()" >
+        <div class="container">
+            <h1>Customer Registration</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+ 
+            <label for="email"><b>Enter Name</b></label>
+            <input type="text" placeholder="Enter Your Name"  name="name" #un="ngModel"  required  [(ngModel)]="car.customerName"/>
+
+            <label for="psw"><b>Enter Mobile Number</b></label>
+            <input type="text" placeholder="Enter Your MobileNo." name="moob" #um="ngModel"required  [(ngModel)]="car.customerMobNo"/>
+ 
+            <label for="email"><b>Enter Email</b></label>
+            <input type="text" placeholder="Enter Your Email" name="mail"#ue="ngModel" required required [(ngModel)]="car.customerEmailId"/>
+ 
+            <label for="psw"><b>Enter  Password</b></label>
+            <input type="password" placeholder="Enter Your Password" name="password" #up="ngModel"  required  [(ngModel)]="car.customerPassword"/>         
+ 
+            <hr>
+ 
+            <button type="submit" class="registerbtn"> Register</button>
+        </div>
+ 
+        <div class="container signin">
+            <p>Already have an account? <a href="#" [routerLink]="['/customerLogin']">Sign in</a>.</p>
+        </div>
+        <br>
+    </form>
+</body>
+
+<app-footer></app-footer>

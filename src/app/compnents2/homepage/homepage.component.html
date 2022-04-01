@@ -1,0 +1,30 @@
+<header>
+    <nav>
+        <div class="logo"><img src="assets/carts.png" width="65" height="65" class="d-inline-block align-top" alt="">
+        </div>
+        <div class="logo">vCart</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" [routerLink]="['/adminLogin']">Admin</a></li>
+            <li><a href="#" [routerLink]="['/customerDashboard']">Customer</a></li>
+            <li><a href="#" [routerLink]="['/retailerDashboard']">Retailer</a> </li>
+        </ul>
+        <div class="content">
+            <div>
+                <p align="right">Welcome to vCart</p>
+            </div> <br><br>
+        </div>
+    </nav>
+    <div class="a-section a-spacing-none fluid-image-container">
+        <img style="width: 68%" alt="" src="assets/Home.png">
+    </div>
+</header>
+<br><br><br>
+<ul>
+    <li><a class="active" href="#" [routerLink]="['/footer']"></a></li>
+</ul>
+<app-footer></app-footer>
